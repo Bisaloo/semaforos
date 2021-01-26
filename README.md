@@ -11,9 +11,9 @@ maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www
 <!-- badges: end -->
 
 The semaforos R package provides easy access to historical data of
-**Semáforos Epidemiológicos**, which are part of the COVID-19 response
-strategy of Mexico. The semáforos define 4 levels of alert at the state
-level and are re-evaluated weekly.
+[**Semáforos Epidemiológicos**, which are part of the COVID-19 response
+strategy of Mexico](https://coronavirus.gob.mx/semaforo/). The semáforos
+define 4 levels of alert at the state level and are re-evaluated weekly.
 
 ![Explanation of the different
 levels](man/figures/semaforos_explanation.png)
@@ -86,7 +86,9 @@ head(sl)
 
 ## Data source
 
-The data is scraped weekly from [the Mexican government
+The data is
+[scraped](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R)
+weekly from [the Mexican government
 website](https://datos.covid-19.conacyt.mx/#SemaFE) using the
 [polite](https://dmi3kno.github.io/polite/) and the
 [rvest](https://rvest.tidyverse.org/) packages.
