@@ -25,4 +25,6 @@ Suggests:
     knitr,
     mxmaps,
     rmarkdown
+Remotes:
+    diegovalle/mxmaps
 VignetteBuilder: knitr
