@@ -15,6 +15,13 @@
 #' and then one column for each week, with the column names indicating the week
 #' in the format `%Y-W%W` (e.g., "2021-W02")
 #'
+#' @examples
+#' sw <- semaforos_get(format = "wide")
+#' head(sw)
+#'
+#' sl <- semaforos_get(format = "long")
+#' head(sl)
+#'
 #' @importFrom utils read.csv
 #' @importFrom stats reshape
 #'

@@ -29,3 +29,11 @@ in the format \verb{\%Y-W\%W} (e.g., "2021-W02")
 \description{
 Get Semáforo Epidemiológico Data from Mexico COVID-19 response
 }
+\examples{
+sw <- semaforos_get(format = "wide")
+head(sw)
+
+sl <- semaforos_get(format = "long")
+head(sl)
+
+}
