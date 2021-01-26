@@ -2,7 +2,7 @@
 % Please edit documentation in R/semaforos_get.R
 \name{semaforos_get}
 \alias{semaforos_get}
-\title{Get Semáforo Epidemiológico Data from Mexico COVID-19 response}
+\title{Get Semáforo Epidemiológico Data from Mexico COVID-19 Response}
 \usage{
 semaforos_get(format = c("long", "wide"))
 }
@@ -27,7 +27,7 @@ in the format \verb{\%Y-W\%W} (e.g., "2021-W02")
 }
 }
 \description{
-Get Semáforo Epidemiológico Data from Mexico COVID-19 response
+Get Semáforo Epidemiológico Data from Mexico COVID-19 Response
 }
 \examples{
 sw <- semaforos_get(format = "wide")

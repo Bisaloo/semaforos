@@ -1,4 +1,4 @@
-#' Get Semáforo Epidemiológico Data from Mexico COVID-19 response
+#' Get Semáforo Epidemiológico Data from Mexico COVID-19 Response
 #'
 #' @param format Either `"long"` (the default), or `"wide"` to specify the
 #' format of the output `data.frame`
