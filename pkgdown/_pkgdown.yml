@@ -1,0 +1,9 @@
+url: https://bisaloo.github.io/semaforos/
+
+template:
+  params:
+    bootswatch: flatly
+
+authors:
+  Hugo Gruson:
+    href: https://www.normalesup.org/~hgruson/
