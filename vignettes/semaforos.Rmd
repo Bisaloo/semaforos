@@ -1,0 +1,44 @@
+---
+title: "Get Semáforo Epidemiológico Data from Mexico COVID-19 Response"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Get Semáforo Epidemiológico Data from Mexico COVID-19 Response}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(semaforos)
+```
+
+```{r}
+sl <- semaforos_get("long")
+head(sl)
+```
+
+```{r, animation.hook="gifski", warning = FALSE, message = FALSE}
+library(mxmaps)
+data(df_mxstate)
+
+colnames(sl) <- c("state_name", "year", "week", "value")
+
+df <- merge(sl, df_mxstate, all = TRUE)
+df$yearweek <- paste(df$year, df$week, sep = "-")
+df$value <- factor(df$value, levels = c("verde", "amarillo", "naranja", "rojo"))
+
+for (w in sort(unique(df$yearweek))) {
+  print(
+    mxstate_choropleth(df[df$yearweek == w, ],
+                       title = paste("Semaforos at week", w)) +
+      ggplot2::scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
+                                 limits = c("verde", "amarillo", "naranja", "rojo"))
+  )
+}
+```

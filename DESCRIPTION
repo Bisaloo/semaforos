@@ -20,4 +20,9 @@ Language: en-GB
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-
+Suggests: 
+    ggplot2,
+    knitr,
+    mxmaps,
+    rmarkdown
+VignetteBuilder: knitr
