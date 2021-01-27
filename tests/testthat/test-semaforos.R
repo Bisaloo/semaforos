@@ -1,20 +1,20 @@
 estados <- c(
   "Aguascalientes",
   "Baja California", "Baja California Sur",
-  "Campeche", "Chiapas", "Chihuahua", "Ciudad de M\u00e9xico", "Coahuila", "Colima",
+  "Campeche", "Chiapas", "Chihuahua", "Ciudad de M\xc3\xa9xico", "Coahuila", "Colima",
   "Durango",
   "Guanajuato", "Guerrero",
   "Hidalgo",
   "Jalisco",
-  "M\u00e9xico", "Michoac\u00e1n", "Morelos",
+  "M\xc3\xa9xico", "Michoac\xc3\xa1n", "Morelos",
   "Nayarit", "Nuevo León",
   "Oaxaca",
   "Puebla",
-  "Quer\u00e9taro", "Quintana Roo",
-  "San Luis Potos\u00ed", "Sinaloa", "Sonora",
+  "Quer\xc3\xa9taro", "Quintana Roo",
+  "San Luis Potos\xc3\xad", "Sinaloa", "Sonora",
   "Tabasco", "Tamaulipas", "Tlaxcala",
   "Veracruz",
-  "Yucat\u00e1n",
+  "Yucat\xc3\xa1n",
   "Zacatecas"
 )
 
