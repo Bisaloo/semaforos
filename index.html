@@ -13,9 +13,12 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
 <meta property="og:title" content="Get Semáforo Epidemiológico Data from Mexico COVID-19 Response">
-<meta property="og:description" content="Provides Semáforo Epidemiológico data which is a response strategy
-  implemented by Mexico during the COVID-19 pandemic with 4 levels of intensity, 
-  defined at the state level, and re-evaluated weekly.">
+<meta property="og:description" content="Provides Semáforo Epidemiológico data. The Semáforos are a response
+  measure implemented by the Mexican federal government during the COVID-19 
+  pandemic to mitigate to virus propagation. They are graduated across 4 colors 
+  (verde, amarillo, naranja, rojo) that indicates increasing levels of urgency
+  and restrictions. Each Semáforo is defined for a given state for a period of
+  one week before being re-evaluated in the light of new epidemiological data.">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -77,7 +80,7 @@
 <a href="#semaforos" class="anchor"></a>semaforos</h1></div>
 <!-- badges: start -->
 
-<p>The semaforos R package provides easy access to historical data of <a href="https://coronavirus.gob.mx/semaforo/"><strong>Semáforos Epidemiológicos</strong>, which are part of the COVID-19 response strategy of Mexico</a>. The semáforos define 4 levels of alert at the state level and are re-evaluated weekly.</p>
+<p>The semaforos R package provides easy access to historical data of <a href="https://coronavirus.gob.mx/semaforo/"><strong>Semáforos Epidemiológicos</strong>, which are part of the COVID-19 response strategy of Mexico</a>. The <strong>Semáforos</strong> define 4 levels of alert at the state level and are re-evaluated weekly.</p>
 <p><img src="reference/figures/semaforos_explanation.png" alt="Explanation of the different levels"></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -143,7 +146,7 @@
 <div id="data-source" class="section level2">
 <h2 class="hasAnchor">
 <a href="#data-source" class="anchor"></a>Data source</h2>
-<p>The data is <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R">scraped</a> weekly from <a href="https://datos.covid-19.conacyt.mx/#SemaFE">the Mexican government website</a> using the <a href="https://dmi3kno.github.io/polite/">polite</a> and the <a href="https://rvest.tidyverse.org/">rvest</a> packages.</p>
+<p>The data is <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R">scraped</a> weekly from <a href="https://datos.covid-19.conacyt.mx/#SemaFE">the Mexican federal government website</a> using the <a href="https://dmi3kno.github.io/polite/">polite</a> and the <a href="https://rvest.tidyverse.org/">rvest</a> packages.</p>
 </div>
 </div>
   </div>
@@ -178,6 +181,7 @@
 <ul class="list-unstyled">
 <li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
 <li><a href="https://github.com/Bisaloo/semaforos/actions"><img src="https://github.com/Bisaloo/semaforos/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://codecov.io/gh/Bisaloo/semaforos?branch=main"><img src="https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
 </div>
