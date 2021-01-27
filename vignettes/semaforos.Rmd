@@ -23,22 +23,24 @@ sl <- semaforos_get("long")
 head(sl)
 ```
 
-```{r, warning = FALSE, message = FALSE}
-library(mxmaps)
-data(df_mxstate)
+```{r, animation.hook="gifski", warning = FALSE, message = FALSE}
+library(ggplot2)
+library(sf)
 
-colnames(sl) <- c("state_name", "year", "week", "value")
+mxstates <- readRDS(system.file("extdata", "sf_mx_estados.rds", package = "semaforos"))
 
-df <- merge(sl, df_mxstate, all = TRUE)
+df <- merge(mxstates, sl, by.x = "name", by.y = "estado", all = TRUE)
 df$yearweek <- paste(df$year, df$week, sep = "-")
-df$value <- factor(df$value, levels = c("verde", "amarillo", "naranja", "rojo"))
 
 for (w in sort(unique(df$yearweek))) {
   print(
-    mxstate_choropleth(df[df$yearweek == w, ],
-                       title = paste("Semaforos at week", w)) +
-      ggplot2::scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
-                                 limits = c("verde", "amarillo", "naranja", "rojo"))
+    ggplot(df[df$yearweek == w, ]) +
+      geom_sf(aes(fill = color), size = 0.2) +
+      coord_sf() +
+      scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
+                        limits = c("verde", "amarillo", "naranja", "rojo")) +
+      theme_minimal() +
+      labs(title = paste("Semáforos for week", w))
   )
 }
 ```

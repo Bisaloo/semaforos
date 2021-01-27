@@ -23,12 +23,13 @@ Language: en-GB
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Depends:
+    R (>= 3.5.0)
 Suggests: 
     ggplot2,
+    gifski,
     knitr,
-    mxmaps,
     rmarkdown,
+    sf,
     testthat (>= 3.0.0)
-Remotes:
-    diegovalle/mxmaps
 VignetteBuilder: knitr
