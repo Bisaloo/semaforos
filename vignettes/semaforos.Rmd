@@ -18,7 +18,8 @@ if (identical(Sys.getenv("IN_PKGDOWN"), "true")) {
     fig.show = "animate"
   )
   knitr::opts_knit$set(
-    animation.fun = knitr::hook_ffmpeg_html
+    animation.fun = knitr::hook_ffmpeg_html,
+    base.url = "https://raw.githubusercontent.com/Bisaloo/semaforos/gh-pages/articles/semaforos_files/figure-html/"
   )
 }
 ```
