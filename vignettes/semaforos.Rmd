@@ -23,7 +23,7 @@ sl <- semaforos_get("long")
 head(sl)
 ```
 
-```{r, animation.hook="gifski", warning = FALSE, message = FALSE}
+```{r, warning = FALSE, message = FALSE}
 library(mxmaps)
 data(df_mxstate)
 
