@@ -12,6 +12,15 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+if (identical(Sys.getenv("IN_PKGDOWN"), "true")) {
+  knitr::opts_chunk$set(
+    fig.show = "animate"
+  )
+  knitr::opts_knit$set(
+    animation.fun = knitr::hook_gifki
+  )
+}
 ```
 
 ```{r setup}
@@ -23,7 +32,7 @@ sl <- semaforos_get("long")
 head(sl)
 ```
 
-```{r, animation.hook="gifski", warning = FALSE, message = FALSE}
+```{r, dpi = 96, warning = FALSE, message = FALSE}
 library(ggplot2)
 library(sf)
 
