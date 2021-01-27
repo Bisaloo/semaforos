@@ -19,7 +19,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
 
       - name: Insall ffmpeg
-        run: sudo apt install ffmpeg
+        run: brew install ffmpeg
 
       - name: Query dependencies
         run: |
