@@ -7,7 +7,7 @@ estados <- c(
   "Hidalgo",
   "Jalisco",
   "M\xc3\xa9xico", "Michoac\xc3\xa1n", "Morelos",
-  "Nayarit", "Nuevo León",
+  "Nayarit", "Nuevo Le\xc3\xb3n",
   "Oaxaca",
   "Puebla",
   "Quer\xc3\xa9taro", "Quintana Roo",
