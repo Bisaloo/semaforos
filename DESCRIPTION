@@ -13,16 +13,6 @@ Description: Provides Semáforo Epidemiológico data. The Semáforos are a respo
   (verde, amarillo, naranja, rojo) that indicates increasing levels of urgency
   and restrictions. Each Semáforo is defined for a given state for a period of
   one week before being re-evaluated in the light of new epidemiological data.
-License: MIT + file LICENSE
-Depends: R (>= 2.10)
-URL: https://bisaloo.github.io/semaforos/, https://github.com/bisaloo/semaforos
-BugReports: https://github.com/bisaloo/semaforos/issues
-Config/testthat/edition: 3
-Encoding: UTF-8
-Language: en-GB
-LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
 Depends:
     R (>= 3.5.0)
 Suggests: 
@@ -32,4 +22,13 @@ Suggests:
     rmarkdown,
     sf,
     testthat (>= 3.0.0)
+License: MIT + file LICENSE
+URL: https://bisaloo.github.io/semaforos/, https://github.com/bisaloo/semaforos
+BugReports: https://github.com/bisaloo/semaforos/issues
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-GB
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
 VignetteBuilder: knitr
