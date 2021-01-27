@@ -18,6 +18,9 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
 
+      - name: Insall ffmpeg
+        run: sudo apt install ffmpeg
+
       - name: Query dependencies
         run: |
           install.packages('remotes')
@@ -35,7 +38,6 @@ jobs:
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
-          install.packages("gifski")
           install.packages("pkgdown", type = "binary")
         shell: Rscript {0}
 

@@ -18,7 +18,7 @@ if (identical(Sys.getenv("IN_PKGDOWN"), "true")) {
     fig.show = "animate"
   )
   knitr::opts_knit$set(
-    animation.fun = knitr::hook_gifski
+    animation.fun = knitr::hook_ffmpeg_html
   )
 }
 ```
