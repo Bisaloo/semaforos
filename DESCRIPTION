@@ -28,7 +28,8 @@ Suggests:
     gifski,
     knitr,
     mxmaps,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 Remotes:
     diegovalle/mxmaps
 VignetteBuilder: knitr

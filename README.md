@@ -8,6 +8,8 @@
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R-CMD-check](https://github.com/Bisaloo/semaforos/workflows/R-CMD-check/badge.svg)](https://github.com/Bisaloo/semaforos/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg)](https://codecov.io/gh/Bisaloo/semaforos?branch=main)
 <!-- badges: end -->
 
 The semaforos R package provides easy access to historical data of
