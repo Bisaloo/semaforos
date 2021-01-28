@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '30 14 * * 4'
+    - cron:  '0 15 * * 4'
 
 name: Scrape-data
 
