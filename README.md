@@ -29,6 +29,9 @@ You can install the development version of semaforos from GitHub:
 remotes::install_github("Bisaloo/semaforos")
 ```
 
+**The data can also be directly used by downloading the [csv
+file](https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv)**.
+
 ## Usage
 
 ``` r
@@ -66,13 +69,13 @@ head(sw)
 #> 4    verde    verde    verde    verde    verde    verde    verde    verde
 #> 5 amarillo amarillo amarillo    verde    verde    verde    verde    verde
 #> 6     rojo     rojo     rojo     rojo     rojo  naranja  naranja  naranja
-#>   2020-W52 2020-W53 2021-W01 2021-W02 2021-W03 2021-W04
-#> 1  naranja amarillo amarillo  naranja  naranja  naranja
-#> 2     rojo     rojo     rojo  naranja  naranja  naranja
-#> 3  naranja  naranja  naranja  naranja  naranja  naranja
-#> 4    verde    verde    verde    verde    verde    verde
-#> 5    verde    verde    verde amarillo amarillo amarillo
-#> 6  naranja  naranja  naranja amarillo amarillo amarillo
+#>   2020-W52 2021-W01 2021-W02 2021-W03 2021-W04
+#> 1  naranja amarillo amarillo  naranja  naranja
+#> 2     rojo     rojo     rojo  naranja  naranja
+#> 3  naranja  naranja  naranja  naranja  naranja
+#> 4    verde    verde    verde    verde    verde
+#> 5    verde    verde    verde amarillo amarillo
+#> 6  naranja  naranja  naranja amarillo amarillo
 ```
 
 ``` r

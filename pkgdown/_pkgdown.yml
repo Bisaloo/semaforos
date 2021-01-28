@@ -7,3 +7,17 @@ template:
 authors:
   Hugo Gruson:
     href: https://www.normalesup.org/~hgruson/
+
+navbar:
+  title: ~
+  type: default
+  left:
+    - text: Reference
+      href: reference/index.html
+    - text: Get started
+      href: articles/semaforos.html
+    - text: Changelog
+      href: news/index.html
+    - text: Get the data!
+      icon: fas fa-file-csv fa-lg
+      href: https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv

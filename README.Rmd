@@ -37,6 +37,9 @@ You can install the development version of semaforos from GitHub:
 remotes::install_github("Bisaloo/semaforos")
 ```
 
+**The data can also be directly used by downloading the 
+[csv file](https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv)**.
+
 ## Usage
 
 ```{r}
