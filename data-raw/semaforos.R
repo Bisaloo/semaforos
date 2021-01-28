@@ -1,3 +1,5 @@
+library(magrittr)
+
 url <- "https://datos.covid-19.conacyt.mx/Semaforo/semaforo.php"
 
 scripts_page <- httr::GET(url) %>%

@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '0 14 * * 4'
+    - cron:  '30 14 * * 4'
 
 name: Scrape-data
 
@@ -19,7 +19,7 @@ jobs:
       - name: Query dependencies
         run: |
           install.packages('remotes')
-          remotes::install_cran(c("httr", "xml2"))
+          remotes::install_cran(c("httr", "xml2", "magrittr"))
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
