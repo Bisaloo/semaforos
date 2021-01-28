@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '0 11 * * 4'
+    - cron:  '25 12 * * 4'
 
 name: Scrape-data
 
@@ -25,22 +25,15 @@ jobs:
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
 
-
-      - name: git config
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "gh-pages committer"
-
       - name: Update data
         run: |
           source("data-raw/semaforos.R")
         shell: Rscript {0}
 
-      - name: Commit results
-        run: |
-          git clone https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git --branch history --single-branch
-          cd semaforos
-          git init
-          git add inst/extdata/semaforos.csv
-          git commit -m 'new data'
-          git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:history --force
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with: 
+          commit_message: Update data
+          file_pattern: inst/extdata/semaforos.csv
+        
+        
+        
