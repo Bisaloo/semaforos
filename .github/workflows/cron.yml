@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '25 12 * * 4'
+    - cron:  '35 13 * * 4'
 
 name: Scrape-data
 
@@ -19,8 +19,7 @@ jobs:
       - name: Query dependencies
         run: |
           install.packages('remotes')
-          remotes::install_cran(c("polite", "readr"))
-          remotes::install_github("tidyverse/rvest")
+          remotes::install_cran(c("httr", "xml2"))
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
@@ -31,9 +30,6 @@ jobs:
         shell: Rscript {0}
 
       - uses: stefanzweifel/git-auto-commit-action@v4
-        with: 
+        with:
           commit_message: Update data
           file_pattern: inst/extdata/semaforos.csv
-        
-        
-        

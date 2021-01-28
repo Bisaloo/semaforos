@@ -96,5 +96,5 @@ The data is
 [scraped](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R)
 weekly from [the Mexican federal government
 website](https://datos.covid-19.conacyt.mx/#SemaFE) using the
-[polite](https://dmi3kno.github.io/polite/) and the
-[rvest](https://rvest.tidyverse.org/) packages.
+[httr](https://httr.r-lib.org/) and the [xml2](https://xml2.r-lib.org/)
+packages.

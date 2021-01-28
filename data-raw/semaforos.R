@@ -1,14 +1,10 @@
 url <- "https://datos.covid-19.conacyt.mx/Semaforo/semaforo.php"
 
-library(rvest)
-library(polite)
+scripts_page <- httr::GET(url) %>%
+  httr::content() %>%
+  xml2::xml_find_all(xpath = "//script")
 
-session <- bow(url)
-
-scripts_page <- scrape(session) %>%
-  html_nodes(xpath = "//script")
-
-semaforos_new <- html_text2(scripts_page[[3]]) %>%
+semaforos_new <- xml2::xml_text(scripts_page[[3]]) %>%
   strsplit(";\\s*") %>%
   unlist() %>%
   { grep("^NColors\\[", ., value = TRUE) } %>%
@@ -17,9 +13,7 @@ semaforos_new <- html_text2(scripts_page[[3]]) %>%
   as.data.frame() %>%
   setNames(format(Sys.Date(), "%Y-W%W"))
 
-library(readr)
-
-semaforos <- read_csv("inst/extdata/semaforos.csv") %>%
+semaforos <- read.csv("inst/extdata/semaforos.csv", check.names = FALSE) %>%
   cbind(semaforos_new)
 
-write_csv(semaforos, "inst/extdata/semaforos.csv")
+write.csv(semaforos, "inst/extdata/semaforos.csv", row.names = FALSE)
