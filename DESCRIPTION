@@ -1,7 +1,7 @@
 Package: semaforos
 Title: Get Semáforo Epidemiológico Data from Mexico COVID-19 Response
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:
     person(given = "Hugo",
            family = "Gruson",
            role = c("aut", "cre", "cph"),
@@ -10,9 +10,15 @@ Authors@R:
 Description: Provides Semáforo Epidemiológico data. The Semáforos are a response
   measure implemented by the Mexican federal government during the COVID-19 
   pandemic to mitigate to virus propagation. They are graduated across 4 colors 
-  (verde, amarillo, naranja, rojo) that indicates increasing levels of urgency
-  and restrictions. Each Semáforo is defined for a given state for a period of
+  (verde, amarillo, naranja, rojo) that indicate increasing levels of urgency
+  and restrictions. Each Semáforo is defined for a given State for a period of
   one week before being re-evaluated in the light of new epidemiological data.
+  Proporciona datos de los Semáforos Epidemiológicos. Los Semáforos 
+  Epidemiológicos son una medida de respuesta por parte del Gobierno Mexicano
+  durante la pandemia del COVID-19 para mitigar la propagacion del virus. Se
+  clasifican en cuatro colores (verde, amarillo, naranja, rojo) que indican un
+  aumento en los niveles de urgencia y restricciones. Los Semáforos
+  Epidemiológicos se definen para cada Estado, y son actualizados semanalmente. 
 Depends:
     R (>= 3.5.0)
 Suggests: 
