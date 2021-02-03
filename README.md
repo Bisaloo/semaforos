@@ -15,15 +15,24 @@ coverage](https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg)](
 The semaforos R package provides easy access to historical data of
 [**Semáforos Epidemiológicos**, which are part of the COVID-19 response
 strategy of Mexico](https://coronavirus.gob.mx/semaforo/). The
-**Semáforos** define 4 levels of alert at the state level and are
+**Semáforos** define 4 degrees of alert at the State level and are
 re-evaluated weekly.
+
+*El paquete de R semaforos proporciona un facil acceso a los datos
+historicos de los [**Semáforos Epidemiológicos**, los cuales forman
+parte de la estrategia de respuesta del Gobierno Mexicano contra la
+pandemia del COVID-19](https://coronavirus.gob.mx/semaforo/). Los
+**Semáforos** poseen 4 grados de alerta que se aplican a cada Estado por
+una semana.*
 
 ![Explanation of the different
 levels](man/figures/semaforos_explanation.png)
 
 ## Installation
 
-You can install the development version of semaforos from GitHub:
+You can install the development version of this package from GitHub:
+
+*Puedes instalar la ultima version de este paquete desde GitHub:*
 
 ``` r
 remotes::install_github("Bisaloo/semaforos")
@@ -31,6 +40,9 @@ remotes::install_github("Bisaloo/semaforos")
 
 **The data can also be directly used by downloading the [csv
 file](https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv)**.
+
+*Tambien puedes descargar los datos directamente desde
+[aqui](https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv).*
 
 ## Usage
 
@@ -94,7 +106,15 @@ head(sl)
 
 The data is
 [scraped](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R)
-weekly from [the Mexican federal government
+[weekly](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml)
+from [the Mexican federal government
 website](https://datos.covid-19.conacyt.mx/#SemaFE) using the
 [httr](https://httr.r-lib.org/) and the [xml2](https://xml2.r-lib.org/)
 packages.
+
+*Los datos son
+[extraidos](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R)
+[semanalmente](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml)
+desde [el sitio web del gobierno
+Mexicano](https://datos.covid-19.conacyt.mx/#SemaFE) con los paquetes
+[httr](https://httr.r-lib.org/) y \[xml2\]((<https://xml2.r-lib.org/>).*
