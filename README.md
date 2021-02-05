@@ -81,13 +81,13 @@ head(sw)
 #> 4    verde    verde    verde    verde    verde    verde    verde    verde
 #> 5 amarillo amarillo amarillo    verde    verde    verde    verde    verde
 #> 6     rojo     rojo     rojo     rojo     rojo  naranja  naranja  naranja
-#>   2020-W52 2021-W01 2021-W02 2021-W03 2021-W04
-#> 1  naranja amarillo amarillo  naranja  naranja
-#> 2     rojo     rojo     rojo  naranja  naranja
-#> 3  naranja  naranja  naranja  naranja  naranja
-#> 4    verde    verde    verde    verde    verde
-#> 5    verde    verde    verde amarillo amarillo
-#> 6  naranja  naranja  naranja amarillo amarillo
+#>   2020-W52 2021-W01 2021-W02 2021-W03 2021-W04 2021-W05
+#> 1  naranja amarillo amarillo  naranja  naranja  naranja
+#> 2     rojo     rojo     rojo  naranja  naranja  naranja
+#> 3  naranja  naranja  naranja  naranja  naranja  naranja
+#> 4    verde    verde    verde    verde    verde amarillo
+#> 5    verde    verde    verde amarillo amarillo amarillo
+#> 6  naranja  naranja  naranja amarillo amarillo  naranja
 ```
 
 ``` r
@@ -117,4 +117,4 @@ packages.
 [semanalmente](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml)
 desde [el sitio web del gobierno
 Mexicano](https://datos.covid-19.conacyt.mx/#SemaFE) con los paquetes
-[httr](https://httr.r-lib.org/) y \[xml2\]((<https://xml2.r-lib.org/>).*
+[httr](https://httr.r-lib.org/) y [xml2](https://xml2.r-lib.org/).*

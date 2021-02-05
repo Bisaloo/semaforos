@@ -76,4 +76,4 @@ The data is
 using the [httr](https://httr.r-lib.org/) and the 
 [xml2](https://xml2.r-lib.org/) packages.
 
-*Los datos son [extraidos](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R) [semanalmente](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml) desde [el sitio web del gobierno Mexicano](https://datos.covid-19.conacyt.mx/#SemaFE) con los paquetes [httr](https://httr.r-lib.org/) y [xml2]((https://xml2.r-lib.org/).*
+*Los datos son [extraidos](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R) [semanalmente](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml) desde [el sitio web del gobierno Mexicano](https://datos.covid-19.conacyt.mx/#SemaFE) con los paquetes [httr](https://httr.r-lib.org/) y [xml2](https://xml2.r-lib.org/).*
