@@ -18,12 +18,10 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
 
-      - name: Insall ffmpeg
-        run: brew install ffmpeg
-
       - name: Query dependencies
         run: |
           install.packages('remotes')
+          remotes::install_cran("gifski")
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
