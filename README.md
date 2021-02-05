@@ -12,6 +12,8 @@ maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www
 coverage](https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg)](https://codecov.io/gh/Bisaloo/semaforos?branch=main)
 <!-- badges: end -->
 
+![](https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/unnamed-chunk-3-.gif)
+
 The semaforos R package provides easy access to historical data of
 [**Semáforos Epidemiológicos**, which are part of the COVID-19 response
 strategy of Mexico](https://coronavirus.gob.mx/semaforo/). The
