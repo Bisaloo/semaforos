@@ -8,9 +8,12 @@ jobs:
   datacron:
     runs-on: macOS-latest
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PAT: ${{ secrets.PAT_CRON }}
     steps:
       - uses: actions/checkout@v2
+        # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/7
+        with:
+          token: ${{ secrets.PAT_CRON }}
 
       - uses: r-lib/actions/setup-r@v1
 
