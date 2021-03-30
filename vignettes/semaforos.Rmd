@@ -26,7 +26,7 @@ head(sl)
 
 ## Map of semaforos over time
 
-```{r, dpi = 96, warning = FALSE, message = FALSE}
+```{r, dpi = 96, warning = FALSE, message = FALSE, out.width="30%"}
 library(ggplot2)
 library(sf)
 
@@ -49,7 +49,7 @@ for (w in sort(unique(df$yearweek))) {
 }
 ```
 
-## Length of time of each semáforo
+## Duration of each semáforo
 
 ```{r}
 library(dplyr)
@@ -78,8 +78,7 @@ ggplot(duration_sf, aes(x = semaforo, y = duration, fill = semaforo, color = sem
   scale_colour_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
                       limits = c("verde", "amarillo", "naranja", "rojo")) +
   labs(y = "duration (weeks)",
-       title = "Duration of semáforos in Mexico depending on the colour") +
-  theme_minimal()
+       title = "Duration of semáforos in Mexico depending on the colour")
 ```
 
 ## Time spent in each colour
@@ -96,6 +95,7 @@ sl %>%
                       limits = c("verde", "amarillo", "naranja", "rojo"),
                       name = "color") +
     theme_minimal() +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+    labs(y = "total number of weeks on this colour")
 ```
 
