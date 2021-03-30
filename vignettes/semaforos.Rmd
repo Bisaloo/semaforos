@@ -77,7 +77,8 @@ ggplot(duration_sf, aes(x = semaforo, y = duration, fill = semaforo, color = sem
   scale_colour_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
                       limits = c("verde", "amarillo", "naranja", "rojo")) +
   labs(y = "duration (weeks)",
-       title = "Duration of semáforos in Mexico depending on the colour")
+       title = "Duration of semáforos in Mexico depending on the colour") +
+  theme_minimal()
 ```
 
 ## Time spent in each colour
