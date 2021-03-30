@@ -22,6 +22,8 @@ Description: Provides Semáforo Epidemiológico data. The Semáforos are a respo
 Depends:
     R (>= 3.5.0)
 Suggests: 
+    dplyr,
+    forcats,
     ggplot2,
     knitr,
     rmarkdown,

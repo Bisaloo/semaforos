@@ -12,15 +12,6 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-
-if (identical(Sys.getenv("IN_PKGDOWN"), "true")) {
-  knitr::opts_chunk$set(
-    fig.show = "animate"
-  )
-  knitr::opts_knit$set(
-    animation.fun = knitr::hook_gifski
-  )
-}
 ```
 
 ```{r setup}
@@ -31,6 +22,9 @@ library(semaforos)
 sl <- semaforos_get("long")
 head(sl)
 ```
+
+
+## Map of semaforos over time
 
 ```{r, dpi = 96, warning = FALSE, message = FALSE}
 library(ggplot2)
@@ -54,3 +48,54 @@ for (w in sort(unique(df$yearweek))) {
   )
 }
 ```
+
+## Length of time of each semáforo
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+duration_sf <- sl %>%
+  group_by(estado) %>%
+  summarize(semaforo = rle(color)$values,
+            duration = rle(color)$lengths)
+head(duration_sf)
+
+ggplot(duration_sf, aes(x = duration, fill = semaforo)) +
+  geom_histogram() +
+  scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
+                    limits = c("verde", "amarillo", "naranja", "rojo")) +
+  labs(x = "duration (weeks)",
+       title = "Distribution of the durations of semáforos in Mexico") +
+  theme_minimal() +
+  facet_wrap(~estado)
+
+ggplot(duration_sf, aes(x = semaforo, y = duration, fill = semaforo, color = semaforo)) +
+  geom_violin(alpha = 0.5) +
+  geom_jitter() +
+  scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
+                    limits = c("verde", "amarillo", "naranja", "rojo")) +
+  scale_colour_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
+                      limits = c("verde", "amarillo", "naranja", "rojo")) +
+  labs(y = "duration (weeks)",
+       title = "Duration of semáforos in Mexico depending on the colour") +
+  theme_minimal()
+```
+
+## Time spent in each colour
+
+```{r}
+library(dplyr)
+library(forcats)
+
+sl %>%
+  count(color, estado) %>%
+  ggplot(aes(x = estado, y = n, fill = fct_relevel(color, "verde"))) +
+    geom_histogram(stat = "identity") +
+    scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
+                      limits = c("verde", "amarillo", "naranja", "rojo"),
+                      name = "color") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+```
+
