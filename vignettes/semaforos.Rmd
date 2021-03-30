@@ -67,8 +67,7 @@ ggplot(duration_sf, aes(x = duration, fill = semaforo)) +
                     limits = c("verde", "amarillo", "naranja", "rojo")) +
   labs(x = "duration (weeks)",
        title = "Distribution of the durations of semáforos in Mexico") +
-  theme_minimal() +
-  facet_wrap(~estado)
+  theme_minimal()
 
 ggplot(duration_sf, aes(x = semaforo, y = duration, fill = semaforo, color = semaforo)) +
   geom_violin(alpha = 0.5) +
