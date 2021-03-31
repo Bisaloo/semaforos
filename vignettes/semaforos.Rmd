@@ -27,6 +27,7 @@ head(sl)
 ## Map of semaforos over time
 
 ```{r, dpi = 96, warning = FALSE, message = FALSE, out.width="30%"}
+```{r, "maps-ggplot", dpi = 96, warning = FALSE, message = FALSE, out.width="30%"}
 library(ggplot2)
 library(sf)
 

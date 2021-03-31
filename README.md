@@ -12,7 +12,7 @@ maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www
 coverage](https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg)](https://codecov.io/gh/Bisaloo/semaforos?branch=main)
 <!-- badges: end -->
 
-![](https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/unnamed-chunk-3-.gif)
+![](https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/maps-ggplot-1.png)
 
 The semaforos R package provides easy access to historical data of
 [**Semáforos Epidemiológicos**, which are part of the COVID-19 response
@@ -83,13 +83,20 @@ head(sw)
 #> 4    verde    verde    verde    verde    verde    verde    verde    verde
 #> 5 amarillo amarillo amarillo    verde    verde    verde    verde    verde
 #> 6     rojo     rojo     rojo     rojo     rojo  naranja  naranja  naranja
-#>   2020-W52 2021-W01 2021-W02 2021-W03 2021-W04 2021-W05
-#> 1  naranja amarillo amarillo  naranja  naranja  naranja
-#> 2     rojo     rojo     rojo  naranja  naranja  naranja
-#> 3  naranja  naranja  naranja  naranja  naranja  naranja
-#> 4    verde    verde    verde    verde    verde amarillo
-#> 5    verde    verde    verde amarillo amarillo amarillo
-#> 6  naranja  naranja  naranja amarillo amarillo  naranja
+#>   2020-W52 2021-W01 2021-W02 2021-W03 2021-W04 2021-W05 2021-W06 2021-W07
+#> 1  naranja amarillo amarillo  naranja  naranja  naranja  naranja  naranja
+#> 2     rojo     rojo     rojo  naranja  naranja  naranja  naranja amarillo
+#> 3  naranja  naranja  naranja  naranja  naranja  naranja  naranja  naranja
+#> 4    verde    verde    verde    verde    verde amarillo amarillo amarillo
+#> 5    verde    verde    verde amarillo amarillo amarillo amarillo    verde
+#> 6  naranja  naranja  naranja amarillo amarillo  naranja  naranja amarillo
+#>   2021-W08 2021-W09 2021-W10 2021-W11 2021-W12
+#> 1  naranja  naranja amarillo amarillo amarillo
+#> 2 amarillo amarillo amarillo amarillo amarillo
+#> 3  naranja  naranja amarillo amarillo amarillo
+#> 4 amarillo amarillo    verde    verde    verde
+#> 5    verde    verde    verde    verde    verde
+#> 6 amarillo amarillo amarillo amarillo amarillo
 ```
 
 ``` r

@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg)](https://codecov.io/gh/Bisaloo/semaforos?branch=main)
 <!-- badges: end -->
 
-![](https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/unnamed-chunk-3-.gif)
+![](https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/maps-ggplot-1.png)
 
 The semaforos R package provides easy access to historical data of [**Semáforos 
 Epidemiológicos**, which are part of the COVID-19 response strategy of 
