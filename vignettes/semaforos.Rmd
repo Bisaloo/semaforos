@@ -90,7 +90,7 @@ library(forcats)
 
 sl %>%
   count(color, estado) %>%
-  ggplot(aes(x = estado, y = n, fill = fct_relevel(color, "verde"))) +
+  ggplot(aes(x = n, y = estado, fill = fct_relevel(color, "verde"))) +
     geom_histogram(stat = "identity") +
     scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
                       limits = c("verde", "amarillo", "naranja", "rojo"),
