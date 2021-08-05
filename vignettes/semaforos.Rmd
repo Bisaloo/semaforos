@@ -96,7 +96,6 @@ sl %>%
                       limits = c("verde", "amarillo", "naranja", "rojo"),
                       name = "color") +
     theme_minimal() +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
-    labs(y = "total number of weeks on this colour")
+    labs(x = "total number of weeks on this colour")
 ```
 
