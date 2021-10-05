@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   semaforos: semaforos.html
-last_built: 2021-09-28T02:23Z
+last_built: 2021-10-05T02:29Z
 urls:
   reference: https://bisaloo.github.io/semaforos//reference
   article: https://bisaloo.github.io/semaforos//articles
