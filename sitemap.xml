@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bisaloo.github.io/semaforos//index.html</loc>
+    <loc>https://bisaloo.github.io/semaforos/404.html</loc>
   </url>
   <url>
-    <loc>https://bisaloo.github.io/semaforos//reference/semaforos_get.html</loc>
+    <loc>https://bisaloo.github.io/semaforos/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://bisaloo.github.io/semaforos//articles/semaforos.html</loc>
+    <loc>https://bisaloo.github.io/semaforos/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://bisaloo.github.io/semaforos/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bisaloo.github.io/semaforos/articles/semaforos.html</loc>
+  </url>
+  <url>
+    <loc>https://bisaloo.github.io/semaforos/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://bisaloo.github.io/semaforos/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bisaloo.github.io/semaforos/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bisaloo.github.io/semaforos/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bisaloo.github.io/semaforos/reference/semaforos_get.html</loc>
   </url>
 </urlset>

@@ -31,6 +31,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -43,7 +45,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">semaforos</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
       </span>
     </div>
 
@@ -59,7 +61,7 @@
   <a href="news/index.html">Changelog</a>
 </li>
 <li>
-  <a href="https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv">
+  <a href="https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv" class="external-link">
     <span class="fas fa-file-csv fa-lg"></span>
      
     Get the data!
@@ -68,7 +70,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/bisaloo/semaforos/">
+  <a href="https://github.com/bisaloo/semaforos/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -85,33 +87,35 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="semaforos" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#semaforos" class="anchor"></a>semaforos</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="semaforos">semaforos<a class="anchor" aria-label="anchor" href="#semaforos"></a>
+</h1></div>
 <!-- badges: start -->
 
 <p><img src="https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/maps-ggplot-1.png"></p>
-<p>The semaforos R package provides easy access to historical data of <a href="https://coronavirus.gob.mx/semaforo/"><strong>Semáforos Epidemiológicos</strong>, which are part of the COVID-19 response strategy of Mexico</a>. The <strong>Semáforos</strong> define 4 degrees of alert at the State level and are re-evaluated weekly.</p>
-<p><em>El paquete de R semaforos proporciona un facil acceso a los datos historicos de los <a href="https://coronavirus.gob.mx/semaforo/"><strong>Semáforos Epidemiológicos</strong>, los cuales forman parte de la estrategia de respuesta del Gobierno Mexicano contra la pandemia del COVID-19</a>. Los <strong>Semáforos</strong> poseen 4 grados de alerta que se aplican a cada Estado por una semana.</em></p>
-<p><img src="reference/figures/semaforos_explanation.png" alt="Explanation of the different levels"></p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<p>The semaforos R package provides easy access to historical data of <a href="https://coronavirus.gob.mx/semaforo/" class="external-link"><strong>Semáforos Epidemiológicos</strong>, which are part of the COVID-19 response strategy of Mexico</a>. The <strong>Semáforos</strong> define 4 degrees of alert at the State level and are re-evaluated weekly.</p>
+<p><em>El paquete de R semaforos proporciona un facil acceso a los datos historicos de los <a href="https://coronavirus.gob.mx/semaforo/" class="external-link"><strong>Semáforos Epidemiológicos</strong>, los cuales forman parte de la estrategia de respuesta del Gobierno Mexicano contra la pandemia del COVID-19</a>. Los <strong>Semáforos</strong> poseen 4 grados de alerta que se aplican a cada Estado por una semana.</em></p>
+<div class="figure">
+<img src="reference/figures/semaforos_explanation.png" alt=""><p class="caption">Explanation of the different levels</p>
+</div>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>You can install the development version of this package from GitHub:</p>
 <p><em>Puedes instalar la ultima version de este paquete desde GitHub:</em></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"Bisaloo/semaforos"</span><span class="op">)</span></code></pre></div>
-<p><strong>The data can also be directly used by downloading the <a href="https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv">csv file</a></strong>.</p>
-<p><em>Tambien puedes descargar los datos directamente desde <a href="https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv">aqui</a>.</em></p>
+<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Bisaloo/semaforos"</span><span class="op">)</span></code></pre></div>
+<p><strong>The data can also be directly used by downloading the <a href="https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv" class="external-link">csv file</a></strong>.</p>
+<p><em>Tambien puedes descargar los datos directamente desde <a href="https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv" class="external-link">aqui</a>.</em></p>
 </div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://bisaloo.github.io/semaforos/">semaforos</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://bisaloo.github.io/semaforos/">semaforos</a></span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">sw</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/semaforos_get.html">semaforos_get</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"wide"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">sw</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sw</span><span class="op">)</span>
 <span class="co">#&gt;                estado 2020-W22 2020-W23 2020-W24 2020-W25 2020-W26 2020-W27</span>
 <span class="co">#&gt; 1      Aguascalientes     rojo     rojo  naranja  naranja  naranja  naranja</span>
 <span class="co">#&gt; 2     Baja California     rojo     rojo     rojo     rojo     rojo     rojo</span>
@@ -156,7 +160,7 @@
 <span class="co">#&gt; 6 amarillo amarillo amarillo amarillo amarillo</span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">sl</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/semaforos_get.html">semaforos_get</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">sl</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sl</span><span class="op">)</span>
 <span class="co">#&gt;                estado year week color</span>
 <span class="co">#&gt; 1      Aguascalientes 2020   22  rojo</span>
 <span class="co">#&gt; 2     Baja California 2020   22  rojo</span>
@@ -165,58 +169,69 @@
 <span class="co">#&gt; 5             Chiapas 2020   22  rojo</span>
 <span class="co">#&gt; 6           Chihuahua 2020   22  rojo</span></code></pre></div>
 </div>
-<div id="data-source" class="section level2">
-<h2 class="hasAnchor">
-<a href="#data-source" class="anchor"></a>Data source</h2>
-<p>The data is <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R">scraped</a> <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml">weekly</a> from <a href="https://datos.covid-19.conacyt.mx/#SemaFE">the Mexican federal government website</a> using the <a href="https://httr.r-lib.org/">httr</a> and the <a href="https://xml2.r-lib.org/">xml2</a> packages.</p>
-<p><em>Los datos son <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R">extraidos</a> <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml">semanalmente</a> desde <a href="https://datos.covid-19.conacyt.mx/#SemaFE">el sitio web del gobierno Mexicano</a> con los paquetes <a href="https://httr.r-lib.org/">httr</a> y <a href="https://xml2.r-lib.org/">xml2</a>.</em></p>
+<div class="section level2">
+<h2 id="data-source">Data source<a class="anchor" aria-label="anchor" href="#data-source"></a>
+</h2>
+<p>The data is <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R" class="external-link">scraped</a> <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml" class="external-link">weekly</a> from <a href="https://datos.covid-19.conacyt.mx/#SemaFE" class="external-link">the Mexican federal government website</a> using the <a href="https://httr.r-lib.org/" class="external-link">httr</a> and the <a href="https://xml2.r-lib.org/" class="external-link">xml2</a> packages.</p>
+<p><em>Los datos son <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R" class="external-link">extraidos</a> <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml" class="external-link">semanalmente</a> desde <a href="https://datos.covid-19.conacyt.mx/#SemaFE" class="external-link">el sitio web del gobierno Mexicano</a> con los paquetes <a href="https://httr.r-lib.org/" class="external-link">httr</a> y <a href="https://xml2.r-lib.org/" class="external-link">xml2</a>.</em></p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/bisaloo/semaforos/">https://​github.com/​bisaloo/​semaforos/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/bisaloo/semaforos/issues">https://​github.com/​bisaloo/​semaforos/​issues</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://www.normalesup.org/~hgruson/">Hugo Gruson</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0002-4094-1476" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="https://github.com/bisaloo/semaforos/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/bisaloo/semaforos/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
-<li><a href="https://github.com/Bisaloo/semaforos/actions"><img src="https://github.com/Bisaloo/semaforos/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://codecov.io/gh/Bisaloo/semaforos?branch=main"><img src="https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="LICENSE.html">Full license</a></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing semaforos</a></li>
+</ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>
+<a href="https://www.normalesup.org/~hgruson/" class="external-link">Hugo Gruson</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0002-4094-1476" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://www.tidyverse.org/lifecycle/#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
+<li><a href="https://github.com/Bisaloo/semaforos/actions" class="external-link"><img src="https://github.com/Bisaloo/semaforos/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://codecov.io/gh/Bisaloo/semaforos?branch=main" class="external-link"><img src="https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://www.normalesup.org/~hgruson/">Hugo Gruson</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://www.normalesup.org/~hgruson/" class="external-link">Hugo Gruson</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -224,6 +239,8 @@
 
   
 
+
+  
 
   </body>
 </html>
