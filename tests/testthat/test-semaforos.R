@@ -38,7 +38,7 @@ test_that("data has expected format", {
   expect_identical(ncol(sl), 4L)
   expect_named(sl, c("estado", "year", "week", "color"))
   expect_setequal(sl$estado, estados)
-  expect_match(sl$year, "^202[01]$")
+  expect_match(sl$year, "^202[012]$")
   expect_match(sl$week, "^[012345]\\d{1}$")
   expect_setequal(sl$color, c("verde", "amarillo", "naranja", "rojo"))
 
