@@ -29,6 +29,9 @@ Suggests:
     rmarkdown,
     sf,
     testthat (>= 3.0.0)
+Config/Needs/data:
+    httr,
+    xml2
 License: MIT + file LICENSE
 URL: https://bisaloo.github.io/semaforos/, https://github.com/bisaloo/semaforos
 BugReports: https://github.com/bisaloo/semaforos/issues
