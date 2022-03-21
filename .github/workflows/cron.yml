@@ -11,7 +11,6 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
-        # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/7
 
       - uses: r-lib/actions/setup-r@v2
         with:
@@ -31,10 +30,13 @@ jobs:
           commit_message: Update data
           file_pattern: inst/extdata/semaforos.csv
 
+  # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/7
   trigger-deploy:
     needs: fetch-data
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+
       - name: Trigger pkgdown.yaml workflow
         run: |
           gh workflow run pkgdown.yaml
