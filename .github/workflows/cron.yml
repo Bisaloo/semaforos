@@ -25,10 +25,15 @@ jobs:
           source("data-raw/semaforos.R")
         shell: Rscript {0}
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update data
-          file_pattern: inst/extdata/semaforos.csv
+      - name: Commit latest data
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Actions"
+          git add inst/extdata/semaforos.csv
+          git commit -m "Fetch latest semaforos data"
+          git pull --rebase origin main
+          git push
+          echo "pushed to github"
 
   # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/7
   trigger-deploy:
