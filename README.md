@@ -7,9 +7,10 @@
 
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![R-CMD-check](https://github.com/Bisaloo/semaforos/workflows/R-CMD-check/badge.svg)](https://github.com/Bisaloo/semaforos/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg)](https://codecov.io/gh/Bisaloo/semaforos?branch=main)
+[![R-CMD-check](https://github.com/Bisaloo/semaforos/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Bisaloo/semaforos/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 ![](https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/maps-ggplot-1.png)
@@ -90,13 +91,20 @@ head(sw)
 #> 4    verde    verde    verde    verde    verde amarillo amarillo amarillo
 #> 5    verde    verde    verde amarillo amarillo amarillo amarillo    verde
 #> 6  naranja  naranja  naranja amarillo amarillo  naranja  naranja amarillo
-#>   2021-W08 2021-W09 2021-W10 2021-W11 2021-W12
-#> 1  naranja  naranja amarillo amarillo amarillo
-#> 2 amarillo amarillo amarillo amarillo amarillo
-#> 3  naranja  naranja amarillo amarillo amarillo
-#> 4 amarillo amarillo    verde    verde    verde
-#> 5    verde    verde    verde    verde    verde
-#> 6 amarillo amarillo amarillo amarillo amarillo
+#>   2021-W08 2021-W09 2021-W10 2021-W11 2021-W12 2021-W13 2021-W14 2021-W15
+#> 1  naranja  naranja amarillo amarillo amarillo amarillo amarillo amarillo
+#> 2 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo
+#> 3  naranja  naranja amarillo amarillo amarillo amarillo amarillo  naranja
+#> 4 amarillo amarillo    verde    verde    verde    verde    verde    verde
+#> 5    verde    verde    verde    verde    verde    verde    verde    verde
+#> 6 amarillo amarillo amarillo amarillo amarillo  naranja  naranja  naranja
+#>   2021-W16 2021-W17 2021-W18 2021-W19 2021-W20 2021-W21 2021-W22 2021-W23
+#> 1 amarillo amarillo amarillo amarillo amarillo    verde    verde    verde
+#> 2 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo
+#> 3  naranja  naranja  naranja  naranja amarillo amarillo amarillo  naranja
+#> 4    verde    verde    verde    verde    verde amarillo amarillo amarillo
+#> 5    verde    verde    verde    verde    verde    verde    verde    verde
+#> 6  naranja  naranja  naranja  naranja  naranja amarillo amarillo amarillo
 ```
 
 ``` r
@@ -122,8 +130,7 @@ website](https://datos.covid-19.conacyt.mx/#SemaFE) using the
 packages.
 
 *Los datos son
-[extraidos](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R)
-[semanalmente](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml)
+[extraidos](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R)[semanalmente](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml)
 desde [el sitio web del gobierno
 Mexicano](https://datos.covid-19.conacyt.mx/#SemaFE) con los paquetes
 [httr](https://httr.r-lib.org/) y [xml2](https://xml2.r-lib.org/).*
