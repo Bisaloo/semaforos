@@ -92,6 +92,7 @@
 </h1></div>
 <!-- badges: start -->
 
+<!-- badges: end -->
 <p><img src="https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/maps-ggplot-1.png"></p>
 <p>The semaforos R package provides easy access to historical data of <a href="https://coronavirus.gob.mx/semaforo/" class="external-link"><strong>Semáforos Epidemiológicos</strong>, which are part of the COVID-19 response strategy of Mexico</a>. The <strong>Semáforos</strong> define 4 degrees of alert at the State level and are re-evaluated weekly.</p>
 <p><em>El paquete de R semaforos proporciona un facil acceso a los datos historicos de los <a href="https://coronavirus.gob.mx/semaforo/" class="external-link"><strong>Semáforos Epidemiológicos</strong>, los cuales forman parte de la estrategia de respuesta del Gobierno Mexicano contra la pandemia del COVID-19</a>. Los <strong>Semáforos</strong> poseen 4 grados de alerta que se aplican a cada Estado por una semana.</em></p>
@@ -151,13 +152,20 @@
 <span class="co">#&gt; 4    verde    verde    verde    verde    verde amarillo amarillo amarillo</span>
 <span class="co">#&gt; 5    verde    verde    verde amarillo amarillo amarillo amarillo    verde</span>
 <span class="co">#&gt; 6  naranja  naranja  naranja amarillo amarillo  naranja  naranja amarillo</span>
-<span class="co">#&gt;   2021-W08 2021-W09 2021-W10 2021-W11 2021-W12</span>
-<span class="co">#&gt; 1  naranja  naranja amarillo amarillo amarillo</span>
-<span class="co">#&gt; 2 amarillo amarillo amarillo amarillo amarillo</span>
-<span class="co">#&gt; 3  naranja  naranja amarillo amarillo amarillo</span>
-<span class="co">#&gt; 4 amarillo amarillo    verde    verde    verde</span>
-<span class="co">#&gt; 5    verde    verde    verde    verde    verde</span>
-<span class="co">#&gt; 6 amarillo amarillo amarillo amarillo amarillo</span></code></pre></div>
+<span class="co">#&gt;   2021-W08 2021-W09 2021-W10 2021-W11 2021-W12 2021-W13 2021-W14 2021-W15</span>
+<span class="co">#&gt; 1  naranja  naranja amarillo amarillo amarillo amarillo amarillo amarillo</span>
+<span class="co">#&gt; 2 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo</span>
+<span class="co">#&gt; 3  naranja  naranja amarillo amarillo amarillo amarillo amarillo  naranja</span>
+<span class="co">#&gt; 4 amarillo amarillo    verde    verde    verde    verde    verde    verde</span>
+<span class="co">#&gt; 5    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="co">#&gt; 6 amarillo amarillo amarillo amarillo amarillo  naranja  naranja  naranja</span>
+<span class="co">#&gt;   2021-W16 2021-W17 2021-W18 2021-W19 2021-W20 2021-W21 2021-W22 2021-W23</span>
+<span class="co">#&gt; 1 amarillo amarillo amarillo amarillo amarillo    verde    verde    verde</span>
+<span class="co">#&gt; 2 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo</span>
+<span class="co">#&gt; 3  naranja  naranja  naranja  naranja amarillo amarillo amarillo  naranja</span>
+<span class="co">#&gt; 4    verde    verde    verde    verde    verde amarillo amarillo amarillo</span>
+<span class="co">#&gt; 5    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="co">#&gt; 6  naranja  naranja  naranja  naranja  naranja amarillo amarillo amarillo</span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">sl</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/semaforos_get.html">semaforos_get</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sl</span><span class="op">)</span>
@@ -173,7 +181,7 @@
 <h2 id="data-source">Data source<a class="anchor" aria-label="anchor" href="#data-source"></a>
 </h2>
 <p>The data is <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R" class="external-link">scraped</a> <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml" class="external-link">weekly</a> from <a href="https://datos.covid-19.conacyt.mx/#SemaFE" class="external-link">the Mexican federal government website</a> using the <a href="https://httr.r-lib.org/" class="external-link">httr</a> and the <a href="https://xml2.r-lib.org/" class="external-link">xml2</a> packages.</p>
-<p><em>Los datos son <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R" class="external-link">extraidos</a> <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml" class="external-link">semanalmente</a> desde <a href="https://datos.covid-19.conacyt.mx/#SemaFE" class="external-link">el sitio web del gobierno Mexicano</a> con los paquetes <a href="https://httr.r-lib.org/" class="external-link">httr</a> y <a href="https://xml2.r-lib.org/" class="external-link">xml2</a>.</em></p>
+<p><em>Los datos son <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R" class="external-link">extraidos</a><a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml" class="external-link">semanalmente</a> desde <a href="https://datos.covid-19.conacyt.mx/#SemaFE" class="external-link">el sitio web del gobierno Mexicano</a> con los paquetes <a href="https://httr.r-lib.org/" class="external-link">httr</a> y <a href="https://xml2.r-lib.org/" class="external-link">xml2</a>.</em></p>
 </div>
 </div>
   </div>
@@ -215,8 +223,8 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://www.tidyverse.org/lifecycle/#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
-<li><a href="https://github.com/Bisaloo/semaforos/actions" class="external-link"><img src="https://github.com/Bisaloo/semaforos/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://codecov.io/gh/Bisaloo/semaforos?branch=main" class="external-link"><img src="https://codecov.io/gh/Bisaloo/semaforos/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/Bisaloo/semaforos/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/Bisaloo/semaforos/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 
