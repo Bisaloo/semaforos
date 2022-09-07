@@ -130,7 +130,7 @@ website](https://datos.covid-19.conacyt.mx/#SemaFE) using the
 packages.
 
 *Los datos son
-[extraidos](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R)[semanalmente](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml)
+[extraidos](https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R) [semanalmente](https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml)
 desde [el sitio web del gobierno
 Mexicano](https://datos.covid-19.conacyt.mx/#SemaFE) con los paquetes
 [httr](https://httr.r-lib.org/) y [xml2](https://xml2.r-lib.org/).*
