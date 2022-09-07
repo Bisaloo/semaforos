@@ -63,7 +63,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">semaforos_get</span><span class="op">(</span>format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"wide"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">semaforos_get</span><span class="op">(</span>format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"wide"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -71,10 +71,13 @@
     <dl><dt>format</dt>
 <dd><p>Either <code>"long"</code> (the default), or <code>"wide"</code> to specify the
 format of the output <code>data.frame</code></p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <ul><li><p>if <code>format = "long"</code>, a <code>data.frame</code> with 4 columns:</p><ul><li><p><code>estado</code> which contains the name of the state to which the semaforo
+    
+
+<ul><li><p>if <code>format = "long"</code>, a <code>data.frame</code> with 4 columns:</p><ul><li><p><code>estado</code> which contains the name of the state to which the semaforo
 in the row applies</p></li>
 <li><p><code>year</code> the four-digit year (<code>%Y</code> in <code><a href="https://rdrr.io/r/base/strptime.html" class="external-link">strptime()</a></code>)</p></li>
 <li><p><code>week</code> the two-digit week, as specified in the ISO8601 (<code>%W</code> in
@@ -88,8 +91,8 @@ in the format <code>%Y-W%W</code> (e.g., "2021-W02")</p></li>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">sw</span> <span class="op">&lt;-</span> <span class="fu">semaforos_get</span><span class="op">(</span>format <span class="op">=</span> <span class="st">"wide"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sw</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">sw</span> <span class="op">&lt;-</span> <span class="fu">semaforos_get</span><span class="op">(</span>format <span class="op">=</span> <span class="st">"wide"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sw</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                estado 2020-W22 2020-W23 2020-W24 2020-W25 2020-W26 2020-W27</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1      Aguascalientes     rojo     rojo  naranja  naranja  naranja  naranja</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2     Baja California     rojo     rojo     rojo     rojo     rojo     rojo</span>
@@ -174,16 +177,30 @@ in the format <code>%Y-W%W</code> (e.g., "2021-W02")</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4    verde    verde    verde    verde    verde    verde    verde    verde</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5    verde    verde    verde    verde    verde    verde    verde    verde</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  naranja  naranja  naranja amarillo amarillo    verde    verde    verde</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2022-W13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    verde</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    verde</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    verde</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    verde</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    verde</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    verde</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">sl</span> <span class="op">&lt;-</span> <span class="fu">semaforos_get</span><span class="op">(</span>format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sl</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2022-W13 2022-W14 2022-W15 2022-W16 2022-W17 2022-W18 2022-W19 2022-W20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2022-W21 2022-W22 2022-W23 2022-W24 2022-W25 2022-W26 2022-W27 2022-W28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2022-W29 2022-W30 2022-W31 2022-W32 2022-W33 2022-W34 2022-W35 2022-W36</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    verde    verde    verde    verde    verde    verde    verde    verde</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">sl</span> <span class="op">&lt;-</span> <span class="fu">semaforos_get</span><span class="op">(</span>format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sl</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                estado year week color</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1      Aguascalientes 2020   22  rojo</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2     Baja California 2020   22  rojo</span>
@@ -191,7 +208,7 @@ in the format <code>%Y-W%W</code> (e.g., "2021-W02")</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4            Campeche 2020   22  rojo</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5             Chiapas 2020   22  rojo</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6           Chihuahua 2020   22  rojo</span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -206,7 +223,7 @@ in the format <code>%Y-W%W</code> (e.g., "2021-W02")</p></li>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

@@ -91,9 +91,7 @@
 <div class="page-header"><h1 id="semaforos">semaforos<a class="anchor" aria-label="anchor" href="#semaforos"></a>
 </h1></div>
 <!-- badges: start -->
-
-<!-- badges: end -->
-<p><img src="https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/maps-ggplot-1.png"></p>
+<!-- badges: end --><p><img src="https://bisaloo.github.io/semaforos/articles/semaforos_files/figure-html/maps-ggplot-1.png"></p>
 <p>The semaforos R package provides easy access to historical data of <a href="https://coronavirus.gob.mx/semaforo/" class="external-link"><strong>Semáforos Epidemiológicos</strong>, which are part of the COVID-19 response strategy of Mexico</a>. The <strong>Semáforos</strong> define 4 degrees of alert at the State level and are re-evaluated weekly.</p>
 <p><em>El paquete de R semaforos proporciona un facil acceso a los datos historicos de los <a href="https://coronavirus.gob.mx/semaforo/" class="external-link"><strong>Semáforos Epidemiológicos</strong>, los cuales forman parte de la estrategia de respuesta del Gobierno Mexicano contra la pandemia del COVID-19</a>. Los <strong>Semáforos</strong> poseen 4 grados de alerta que se aplican a cada Estado por una semana.</em></p>
 <div class="figure">
@@ -105,7 +103,7 @@
 <p>You can install the development version of this package from GitHub:</p>
 <p><em>Puedes instalar la ultima version de este paquete desde GitHub:</em></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Bisaloo/semaforos"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Bisaloo/semaforos"</span><span class="op">)</span></span></code></pre></div>
 <p><strong>The data can also be directly used by downloading the <a href="https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv" class="external-link">csv file</a></strong>.</p>
 <p><em>Tambien puedes descargar los datos directamente desde <a href="https://github.com/Bisaloo/semaforos/blob/main/inst/extdata/semaforos.csv" class="external-link">aqui</a>.</em></p>
 </div>
@@ -113,75 +111,75 @@
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://bisaloo.github.io/semaforos/">semaforos</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://bisaloo.github.io/semaforos/">semaforos</a></span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">sw</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/semaforos_get.html">semaforos_get</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"wide"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sw</span><span class="op">)</span>
-<span class="co">#&gt;                estado 2020-W22 2020-W23 2020-W24 2020-W25 2020-W26 2020-W27</span>
-<span class="co">#&gt; 1      Aguascalientes     rojo     rojo  naranja  naranja  naranja  naranja</span>
-<span class="co">#&gt; 2     Baja California     rojo     rojo     rojo     rojo     rojo     rojo</span>
-<span class="co">#&gt; 3 Baja California Sur     rojo     rojo  naranja  naranja  naranja  naranja</span>
-<span class="co">#&gt; 4            Campeche     rojo     rojo  naranja  naranja  naranja  naranja</span>
-<span class="co">#&gt; 5             Chiapas     rojo     rojo     rojo     rojo  naranja     rojo</span>
-<span class="co">#&gt; 6           Chihuahua     rojo     rojo  naranja  naranja  naranja  naranja</span>
-<span class="co">#&gt;   2020-W28 2020-W29 2020-W30 2020-W31 2020-W32 2020-W33 2020-W34 2020-W35</span>
-<span class="co">#&gt; 1  naranja  naranja  naranja  naranja  naranja     rojo     rojo  naranja</span>
-<span class="co">#&gt; 2     rojo  naranja  naranja  naranja  naranja  naranja  naranja  naranja</span>
-<span class="co">#&gt; 3  naranja     rojo     rojo     rojo     rojo     rojo     rojo  naranja</span>
-<span class="co">#&gt; 4  naranja  naranja  naranja  naranja  naranja amarillo amarillo amarillo</span>
-<span class="co">#&gt; 5     rojo  naranja  naranja  naranja  naranja  naranja  naranja amarillo</span>
-<span class="co">#&gt; 6  naranja  naranja  naranja  naranja  naranja  naranja  naranja amarillo</span>
-<span class="co">#&gt;   2020-W36 2020-W37 2020-W38 2020-W39 2020-W40 2020-W41 2020-W42 2020-W43</span>
-<span class="co">#&gt; 1  naranja  naranja  naranja amarillo amarillo  naranja  naranja  naranja</span>
-<span class="co">#&gt; 2  naranja  naranja  naranja amarillo amarillo amarillo amarillo  naranja</span>
-<span class="co">#&gt; 3  naranja  naranja  naranja  naranja  naranja amarillo amarillo  naranja</span>
-<span class="co">#&gt; 4 amarillo amarillo amarillo    verde    verde    verde    verde    verde</span>
-<span class="co">#&gt; 5 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo</span>
-<span class="co">#&gt; 6 amarillo amarillo amarillo amarillo amarillo  naranja  naranja     rojo</span>
-<span class="co">#&gt;   2020-W44 2020-W45 2020-W46 2020-W47 2020-W48 2020-W49 2020-W50 2020-W51</span>
-<span class="co">#&gt; 1  naranja  naranja  naranja  naranja  naranja  naranja  naranja  naranja</span>
-<span class="co">#&gt; 2  naranja  naranja  naranja  naranja  naranja     rojo     rojo     rojo</span>
-<span class="co">#&gt; 3  naranja  naranja  naranja amarillo amarillo  naranja  naranja  naranja</span>
-<span class="co">#&gt; 4    verde    verde    verde    verde    verde    verde    verde    verde</span>
-<span class="co">#&gt; 5 amarillo amarillo amarillo    verde    verde    verde    verde    verde</span>
-<span class="co">#&gt; 6     rojo     rojo     rojo     rojo     rojo  naranja  naranja  naranja</span>
-<span class="co">#&gt;   2020-W52 2021-W01 2021-W02 2021-W03 2021-W04 2021-W05 2021-W06 2021-W07</span>
-<span class="co">#&gt; 1  naranja amarillo amarillo  naranja  naranja  naranja  naranja  naranja</span>
-<span class="co">#&gt; 2     rojo     rojo     rojo  naranja  naranja  naranja  naranja amarillo</span>
-<span class="co">#&gt; 3  naranja  naranja  naranja  naranja  naranja  naranja  naranja  naranja</span>
-<span class="co">#&gt; 4    verde    verde    verde    verde    verde amarillo amarillo amarillo</span>
-<span class="co">#&gt; 5    verde    verde    verde amarillo amarillo amarillo amarillo    verde</span>
-<span class="co">#&gt; 6  naranja  naranja  naranja amarillo amarillo  naranja  naranja amarillo</span>
-<span class="co">#&gt;   2021-W08 2021-W09 2021-W10 2021-W11 2021-W12 2021-W13 2021-W14 2021-W15</span>
-<span class="co">#&gt; 1  naranja  naranja amarillo amarillo amarillo amarillo amarillo amarillo</span>
-<span class="co">#&gt; 2 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo</span>
-<span class="co">#&gt; 3  naranja  naranja amarillo amarillo amarillo amarillo amarillo  naranja</span>
-<span class="co">#&gt; 4 amarillo amarillo    verde    verde    verde    verde    verde    verde</span>
-<span class="co">#&gt; 5    verde    verde    verde    verde    verde    verde    verde    verde</span>
-<span class="co">#&gt; 6 amarillo amarillo amarillo amarillo amarillo  naranja  naranja  naranja</span>
-<span class="co">#&gt;   2021-W16 2021-W17 2021-W18 2021-W19 2021-W20 2021-W21 2021-W22 2021-W23</span>
-<span class="co">#&gt; 1 amarillo amarillo amarillo amarillo amarillo    verde    verde    verde</span>
-<span class="co">#&gt; 2 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo</span>
-<span class="co">#&gt; 3  naranja  naranja  naranja  naranja amarillo amarillo amarillo  naranja</span>
-<span class="co">#&gt; 4    verde    verde    verde    verde    verde amarillo amarillo amarillo</span>
-<span class="co">#&gt; 5    verde    verde    verde    verde    verde    verde    verde    verde</span>
-<span class="co">#&gt; 6  naranja  naranja  naranja  naranja  naranja amarillo amarillo amarillo</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">sw</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/semaforos_get.html">semaforos_get</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"wide"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sw</span><span class="op">)</span></span>
+<span><span class="co">#&gt;                estado 2020-W22 2020-W23 2020-W24 2020-W25 2020-W26 2020-W27</span></span>
+<span><span class="co">#&gt; 1      Aguascalientes     rojo     rojo  naranja  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 2     Baja California     rojo     rojo     rojo     rojo     rojo     rojo</span></span>
+<span><span class="co">#&gt; 3 Baja California Sur     rojo     rojo  naranja  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 4            Campeche     rojo     rojo  naranja  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 5             Chiapas     rojo     rojo     rojo     rojo  naranja     rojo</span></span>
+<span><span class="co">#&gt; 6           Chihuahua     rojo     rojo  naranja  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt;   2020-W28 2020-W29 2020-W30 2020-W31 2020-W32 2020-W33 2020-W34 2020-W35</span></span>
+<span><span class="co">#&gt; 1  naranja  naranja  naranja  naranja  naranja     rojo     rojo  naranja</span></span>
+<span><span class="co">#&gt; 2     rojo  naranja  naranja  naranja  naranja  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 3  naranja     rojo     rojo     rojo     rojo     rojo     rojo  naranja</span></span>
+<span><span class="co">#&gt; 4  naranja  naranja  naranja  naranja  naranja amarillo amarillo amarillo</span></span>
+<span><span class="co">#&gt; 5     rojo  naranja  naranja  naranja  naranja  naranja  naranja amarillo</span></span>
+<span><span class="co">#&gt; 6  naranja  naranja  naranja  naranja  naranja  naranja  naranja amarillo</span></span>
+<span><span class="co">#&gt;   2020-W36 2020-W37 2020-W38 2020-W39 2020-W40 2020-W41 2020-W42 2020-W43</span></span>
+<span><span class="co">#&gt; 1  naranja  naranja  naranja amarillo amarillo  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 2  naranja  naranja  naranja amarillo amarillo amarillo amarillo  naranja</span></span>
+<span><span class="co">#&gt; 3  naranja  naranja  naranja  naranja  naranja amarillo amarillo  naranja</span></span>
+<span><span class="co">#&gt; 4 amarillo amarillo amarillo    verde    verde    verde    verde    verde</span></span>
+<span><span class="co">#&gt; 5 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo</span></span>
+<span><span class="co">#&gt; 6 amarillo amarillo amarillo amarillo amarillo  naranja  naranja     rojo</span></span>
+<span><span class="co">#&gt;   2020-W44 2020-W45 2020-W46 2020-W47 2020-W48 2020-W49 2020-W50 2020-W51</span></span>
+<span><span class="co">#&gt; 1  naranja  naranja  naranja  naranja  naranja  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 2  naranja  naranja  naranja  naranja  naranja     rojo     rojo     rojo</span></span>
+<span><span class="co">#&gt; 3  naranja  naranja  naranja amarillo amarillo  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 4    verde    verde    verde    verde    verde    verde    verde    verde</span></span>
+<span><span class="co">#&gt; 5 amarillo amarillo amarillo    verde    verde    verde    verde    verde</span></span>
+<span><span class="co">#&gt; 6     rojo     rojo     rojo     rojo     rojo  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt;   2020-W52 2021-W01 2021-W02 2021-W03 2021-W04 2021-W05 2021-W06 2021-W07</span></span>
+<span><span class="co">#&gt; 1  naranja amarillo amarillo  naranja  naranja  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 2     rojo     rojo     rojo  naranja  naranja  naranja  naranja amarillo</span></span>
+<span><span class="co">#&gt; 3  naranja  naranja  naranja  naranja  naranja  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt; 4    verde    verde    verde    verde    verde amarillo amarillo amarillo</span></span>
+<span><span class="co">#&gt; 5    verde    verde    verde amarillo amarillo amarillo amarillo    verde</span></span>
+<span><span class="co">#&gt; 6  naranja  naranja  naranja amarillo amarillo  naranja  naranja amarillo</span></span>
+<span><span class="co">#&gt;   2021-W08 2021-W09 2021-W10 2021-W11 2021-W12 2021-W13 2021-W14 2021-W15</span></span>
+<span><span class="co">#&gt; 1  naranja  naranja amarillo amarillo amarillo amarillo amarillo amarillo</span></span>
+<span><span class="co">#&gt; 2 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo</span></span>
+<span><span class="co">#&gt; 3  naranja  naranja amarillo amarillo amarillo amarillo amarillo  naranja</span></span>
+<span><span class="co">#&gt; 4 amarillo amarillo    verde    verde    verde    verde    verde    verde</span></span>
+<span><span class="co">#&gt; 5    verde    verde    verde    verde    verde    verde    verde    verde</span></span>
+<span><span class="co">#&gt; 6 amarillo amarillo amarillo amarillo amarillo  naranja  naranja  naranja</span></span>
+<span><span class="co">#&gt;   2021-W16 2021-W17 2021-W18 2021-W19 2021-W20 2021-W21 2021-W22 2021-W23</span></span>
+<span><span class="co">#&gt; 1 amarillo amarillo amarillo amarillo amarillo    verde    verde    verde</span></span>
+<span><span class="co">#&gt; 2 amarillo amarillo amarillo amarillo amarillo amarillo amarillo amarillo</span></span>
+<span><span class="co">#&gt; 3  naranja  naranja  naranja  naranja amarillo amarillo amarillo  naranja</span></span>
+<span><span class="co">#&gt; 4    verde    verde    verde    verde    verde amarillo amarillo amarillo</span></span>
+<span><span class="co">#&gt; 5    verde    verde    verde    verde    verde    verde    verde    verde</span></span>
+<span><span class="co">#&gt; 6  naranja  naranja  naranja  naranja  naranja amarillo amarillo amarillo</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">sl</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/semaforos_get.html">semaforos_get</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sl</span><span class="op">)</span>
-<span class="co">#&gt;                estado year week color</span>
-<span class="co">#&gt; 1      Aguascalientes 2020   22  rojo</span>
-<span class="co">#&gt; 2     Baja California 2020   22  rojo</span>
-<span class="co">#&gt; 3 Baja California Sur 2020   22  rojo</span>
-<span class="co">#&gt; 4            Campeche 2020   22  rojo</span>
-<span class="co">#&gt; 5             Chiapas 2020   22  rojo</span>
-<span class="co">#&gt; 6           Chihuahua 2020   22  rojo</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">sl</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/semaforos_get.html">semaforos_get</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">sl</span><span class="op">)</span></span>
+<span><span class="co">#&gt;                estado year week color</span></span>
+<span><span class="co">#&gt; 1      Aguascalientes 2020   22  rojo</span></span>
+<span><span class="co">#&gt; 2     Baja California 2020   22  rojo</span></span>
+<span><span class="co">#&gt; 3 Baja California Sur 2020   22  rojo</span></span>
+<span><span class="co">#&gt; 4            Campeche 2020   22  rojo</span></span>
+<span><span class="co">#&gt; 5             Chiapas 2020   22  rojo</span></span>
+<span><span class="co">#&gt; 6           Chihuahua 2020   22  rojo</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="data-source">Data source<a class="anchor" aria-label="anchor" href="#data-source"></a>
 </h2>
 <p>The data is <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R" class="external-link">scraped</a> <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml" class="external-link">weekly</a> from <a href="https://datos.covid-19.conacyt.mx/#SemaFE" class="external-link">the Mexican federal government website</a> using the <a href="https://httr.r-lib.org/" class="external-link">httr</a> and the <a href="https://xml2.r-lib.org/" class="external-link">xml2</a> packages.</p>
-<p><em>Los datos son <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R" class="external-link">extraidos</a><a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml" class="external-link">semanalmente</a> desde <a href="https://datos.covid-19.conacyt.mx/#SemaFE" class="external-link">el sitio web del gobierno Mexicano</a> con los paquetes <a href="https://httr.r-lib.org/" class="external-link">httr</a> y <a href="https://xml2.r-lib.org/" class="external-link">xml2</a>.</em></p>
+<p><em>Los datos son <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/data-raw/semaforos.R" class="external-link">extraidos</a> <a href="https://raw.githubusercontent.com/Bisaloo/semaforos/main/.github/workflows/cron.yml" class="external-link">semanalmente</a> desde <a href="https://datos.covid-19.conacyt.mx/#SemaFE" class="external-link">el sitio web del gobierno Mexicano</a> con los paquetes <a href="https://httr.r-lib.org/" class="external-link">httr</a> y <a href="https://xml2.r-lib.org/" class="external-link">xml2</a>.</em></p>
 </div>
 </div>
   </div>
@@ -239,7 +237,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
