@@ -40,8 +40,10 @@ for (w in sort(unique(df$yearweek))) {
     ggplot(df[df$yearweek == w, ]) +
       geom_sf(aes(fill = color), size = 0.2) +
       coord_sf() +
-      scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
-                        limits = c("verde", "amarillo", "naranja", "rojo")) +
+      scale_fill_manual(
+        values = c(verde = "#02A247", amarillo = "#FFC60F", naranja = "#FF7000", rojo = "#FF0000"),
+        limits = c("verde", "amarillo", "naranja", "rojo")
+      ) +
       theme_minimal() +
       theme(title = element_text(color = "grey30"), legend.text = element_text(color = "grey30")) +
       labs(title = paste("Semáforos for week", w))
@@ -63,8 +65,10 @@ head(duration_sf)
 
 ggplot(duration_sf, aes(x = duration, fill = semaforo)) +
   geom_histogram() +
-  scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
-                    limits = c("verde", "amarillo", "naranja", "rojo")) +
+  scale_fill_manual(
+    values = c(verde = "#02A247", amarillo = "#FFC60F", naranja = "#FF7000", rojo = "#FF0000"),
+    limits = c("verde", "amarillo", "naranja", "rojo")
+  ) +
   labs(x = "duration (weeks)",
        title = "Distribution of the durations of semáforos in Mexico") +
   theme_minimal()
@@ -72,10 +76,14 @@ ggplot(duration_sf, aes(x = duration, fill = semaforo)) +
 ggplot(duration_sf, aes(x = semaforo, y = duration, fill = semaforo, color = semaforo)) +
   geom_violin(alpha = 0.5) +
   geom_jitter() +
-  scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
-                    limits = c("verde", "amarillo", "naranja", "rojo")) +
-  scale_colour_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
-                      limits = c("verde", "amarillo", "naranja", "rojo")) +
+  scale_fill_manual(
+    values = c(verde = "#02A247", amarillo = "#FFC60F", naranja = "#FF7000", rojo = "#FF0000"),
+    limits = c("verde", "amarillo", "naranja", "rojo")
+  ) +
+  scale_colour_manual(
+    values = c(verde = "#02A247", amarillo = "#FFC60F", naranja = "#FF7000", rojo = "#FF0000"),
+    limits = c("verde", "amarillo", "naranja", "rojo")
+  ) +
   labs(y = "duration (weeks)",
        title = "Duration of semáforos in Mexico depending on the colour") +
   theme_minimal()
@@ -91,9 +99,11 @@ sl %>%
   count(color, estado) %>%
   ggplot(aes(x = n, y = estado, fill = fct_relevel(color, "verde"))) +
     geom_histogram(stat = "identity") +
-    scale_fill_manual(values = c("verde" = "#02A247", "amarillo" = "#FFC60F", "naranja" = "#FF7000", "rojo" = "#FF0000"),
-                      limits = c("verde", "amarillo", "naranja", "rojo"),
-                      name = "color") +
+    scale_fill_manual(
+      values = c(verde = "#02A247", amarillo = "#FFC60F", naranja = "#FF7000", rojo = "#FF0000"),
+      limits = c("verde", "amarillo", "naranja", "rojo"),
+      name = "color"
+    ) +
     theme_minimal() +
     labs(x = "total number of weeks on this colour")
 ```
